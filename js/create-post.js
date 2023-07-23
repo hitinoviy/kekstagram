@@ -24,4 +24,4 @@ const createPost = (index) => ({
 
 export const getPosts = () => Array.from(
   {length: 25},
-  (_, postIndex)=> createPost(postIndex+1))
+  (_, postIndex)=> createPost(postIndex+1));
