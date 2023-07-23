@@ -12,7 +12,7 @@ const createComment = (index) => ({
   name: getRandomArrayElement(data.names)
 });
 
-export const createPost = (index) => ({
+const createPost = (index) => ({
   id: index,
   url: `photos/${index}.jpg`,
   description: getRandomArrayElement(data.descriptions),
@@ -21,3 +21,7 @@ export const createPost = (index) => ({
     {length: getRandomInteger(1,6)},
     (_, commentIndex) => createComment(commentIndex+1))
 });
+
+export const getPosts = () => Array.from(
+  {length: 25},
+  (_, postIndex)=> createPost(postIndex+1))

@@ -1,9 +1,6 @@
-import {createPost} from './create-post.js';
+import {getPosts} from './create-post.js';
+import {renderPosts} from './create-post-element.js';
 
-const getPhotos = () => Array.from(
-  {length: 25},
-  (_, postIndex)=> createPost(postIndex+1));
 
-getPhotos();
-
+renderPosts(getPosts());
 
