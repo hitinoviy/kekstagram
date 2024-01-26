@@ -8,3 +8,5 @@ export const getRandomInteger = (min, max) => {
 export const checkStringLength = (str, maxLength) => str.length <= maxLength;
 
 export const getRandomArrayElement = (arr) => arr[getRandomInteger(0,arr.length-1)];
+
+export const IsEscapeKey = (evt) => evt.code==='Escape';
